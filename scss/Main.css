@@ -21,9 +21,7 @@ body {
 header {
   height: 10vh;
   width: 100%;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header .container {
@@ -46,12 +44,7 @@ header .container img {
      object-fit: cover;
 }
 
-header .container .social_links a {
-  color: #000000;
-  font-size: 20px;
-}
-
-header .container .nav_links .Links {
+header .container .nav_links .profile {
   display: none;
 }
 
@@ -357,6 +350,10 @@ main .container button {
 }
 
 @media (max-width: 991px) {
+  main {
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(90%, rgba(255, 255, 255, 0.85)), color-stop(10%, #6c63ff)), url(https://media.istockphoto.com/photos/working-on-desk-picture-id180822903?k=20&m=180822903&s=612x612&w=0&h=1gQTY8nWFCNPX2Qnxyeq35xMlR-b3DB3gzbLj-ukOD8=) no-repeat center center/cover;
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.85) 90%, #6c63ff 10%), url(https://media.istockphoto.com/photos/working-on-desk-picture-id180822903?k=20&m=180822903&s=612x612&w=0&h=1gQTY8nWFCNPX2Qnxyeq35xMlR-b3DB3gzbLj-ukOD8=) no-repeat center center/cover;
+  }
   .container {
     max-width: 768px;
   }
@@ -378,7 +375,6 @@ main .container button {
   }
   header .container .nav_links {
     position: absolute;
-    padding: 0 20px;
     top: 10vh;
     left: 0;
     height: 0;
@@ -388,12 +384,12 @@ main .container button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -407,12 +403,31 @@ main .container button {
             flex-direction: column;
   }
   header .container .nav_links ul li {
-    padding: 10px;
+    padding: 15px;
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: center;
   }
   header .container .nav_links ul li:hover {
     background: white;
+  }
+  header .container .nav_links .profile {
+    margin-top: 40px;
+    display: block;
+    height: 160px;
+    width: 160px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    margin-bottom: 20px;
+    border: 4px solid rgba(12, 6, 119, 0.2);
+  }
+  header .container .nav_links .profile img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   header .container .nav_links.active {
     height: 100%;
@@ -451,7 +466,7 @@ main .container button {
 
 .contact {
   font-family: 'Ubuntu', sans-serif;
-  padding: 80px;
+  padding: 80px 0;
 }
 
 .contact .container .title {
@@ -574,36 +589,5 @@ main .container button {
     width: 100%;
     height: 400px;
   }
-}
-
-maip .Links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-top: 20px;
-}
-
-maip .Links .profile {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-maip .Links .profile img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 /*# sourceMappingURL=Main.css.map */
