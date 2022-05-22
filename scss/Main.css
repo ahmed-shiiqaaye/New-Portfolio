@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&family=Fira+Sans:wght@400;500;600&family=Germania+One&family=Josefin+Sans&family=Lato&family=Lobster&family=Nunito&family=Oleo+Script&family=Oswald:wght@300;400;500;700&family=PT+Sans:ital@1&family=Poppins:wght@400;500&family=Ubuntu:ital,wght@0,400;0,700;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header .container img {
+  width: 100px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .container .social_links a {
+  color: #000000;
+  font-size: 20px;
+}
+
+header .container .nav_links .Links {
+  display: none;
+}
+
+header .container .nav_links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+header .container .nav_links ul li {
+  padding: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+header .container .nav_links ul li:hover {
+  background: #f2f2f2;
+}
+
+header .container .nav_links ul li a {
+  color: #3f3d56;
+  cursor: pointer;
+}
+
+header .container .menu_icon {
+  display: none;
+  font-size: 24px;
+}
+
+header.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: white;
+  z-index: 99;
+}
+
+main {
+  height: 90vh;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(90%, white), color-stop(10%, #6c63ff));
+  background: linear-gradient(to bottom left, white 90%, #6c63ff 10%);
+}
+
+main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  height: 100%;
+  color: #3f3d56;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+main .container .img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+main .container .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .container p {
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+main .container p.head {
+  margin-bottom: 40px;
+  margin: 0;
+  font-weight: 700;
+  font-family: 'Ubunto', sans-serif;
+}
+
+main .container p.b2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+main .container h3 {
+  font-size: 45px;
+  margin: 10px 0;
+  font-weight: 800;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+}
+
+main .container button {
+  padding: 20px 33px;
+  font-size: 13px;
+  margin-top: 20px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#6c63ff), to(#b309f18f));
+  background: linear-gradient(to right bottom, #6c63ff, #b309f18f);
+  color: white;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+.title {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.title h2 {
+  font-size: 30px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3f3d56;
+}
+
+.title h2 span {
+  color: #6c63ff;
+}
+
+.about {
+  padding: 60px 0;
+}
+
+.about .container .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.about .container .grid img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .container .grid .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .container .grid .text .name {
+  text-transform: uppercase;
+  color: #6c63ff;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about .container .grid .text p {
+  line-height: 1.6;
+  color: #3f3d56;
+  margin-bottom: 20px;
+  opacity: .9;
+}
+
+.about .container .grid .text a {
+  padding: 20px 33px;
+  font-size: 13px;
+  margin-top: 20px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#6c63ff), to(#b309f18f));
+  background: linear-gradient(to right bottom, #6c63ff, #b309f18f);
+  color: white;
+  border: 0;
+  outline: none;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+.projects {
+  padding: 60px 0;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.projects .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.projects .grid .card {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.projects .grid .card:hover {
+  -webkit-box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+}
+
+.projects .grid .card .image {
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.projects .grid .card .image img {
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projects .grid .card .text {
+  padding: 20px 0px;
+}
+
+.projects .grid .card .text .name {
+  text-transform: uppercase;
+  color: #0c0677;
+  margin-bottom: 10px;
+}
+
+.projects .grid .card .text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #3f3d56;
+}
+
+.projects .grid .card .text .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.projects .grid .card .text .links a {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  height: 40px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0c0677;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.projects .grid .card .text .links a:hover {
+  background: #17118dda;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 768px;
+  }
+  main .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .container .img {
+    display: none;
+  }
+  main .container .div1 {
+    width: 100%;
+  }
+  header .container .menu_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+  }
+  header .container .nav_links {
+    position: absolute;
+    padding: 0 20px;
+    top: 10vh;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #f2f2f2;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    z-index: 88;
+  }
+  header .container .nav_links ul {
+    margin-top: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .container .nav_links ul li {
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  header .container .nav_links ul li:hover {
+    background: white;
+  }
+  header .container .nav_links.active {
+    height: 100%;
+  }
+  .contact .container .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 568px;
+  }
+  main .container .div1 h3 {
+    font-size: 40px;
+  }
+  .about .container .grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .container .grid img {
+    max-width: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (max-width: 568px) {
+  .projects .container {
+    max-width: 400px;
+  }
+}
+
+.contact {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 80px;
+}
+
+.contact .container .title {
+  margin-bottom: 30px;
+}
+
+.contact .container .title h2 {
+  margin-bottom: 20px;
+}
+
+.contact .container .personal {
+  margin-bottom: 20px;
+}
+
+.contact .container .inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.contact .container .inner .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+}
+
+.contact .container .inner .list .icon {
+  background: #6b63ff58;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #0c0677;
+  margin-right: 8px;
+}
+
+.contact .container .inner .list .name {
+  color: #3f3d56;
+}
+
+.contact .container .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .container .grid .img {
+  overflow: hidden;
+  max-width: 450px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contact .container .grid .form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+.contact .container .grid .form input, .contact .container .grid .form textarea {
+  padding: 15px 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.contact .container .grid .form label {
+  margin-bottom: 10px;
+}
+
+.contact .container .grid .form button {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  background: #554eddb0;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .contact .container .grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .container .grid .img {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+maip .Links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 20px;
+}
+
+maip .Links .profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+maip .Links .profile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=Main.css.map */
