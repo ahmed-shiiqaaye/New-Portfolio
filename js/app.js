@@ -17,15 +17,5 @@ headerAnchorTAg.forEach(link =>{
     })
 });
 
-// Fixed navbar
-// let navbar = document.querySelector('header');
-// window.addEventListener('scroll',()=>{
-//     let headerHeight = navbar.getBoundingClientRect().height;
-//     let scrHi = window.pageYOffset;
-//     console.log(headerHeight)
-//     if(scrHi >= headerHeight){
-//         navbar.classList.add('fixed');
-//     }else{
-//         navbar.classList.remove('fixed');
-//     }
-// })
+let date = new Date().getFullYear();
+document.querySelector('.date').textContent = date;
