@@ -315,7 +315,7 @@ main .container .div1 .btns div a {
 
 .projects {
   padding: 60px 0;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .projects .grid {
@@ -331,6 +331,7 @@ main .container .div1 .btns div a {
   padding: 10px;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .projects .grid .card:hover {
@@ -515,6 +516,7 @@ main .container .div1 .btns div a {
           box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
+  margin-top: 6px;
   outline: none;
 }
 
