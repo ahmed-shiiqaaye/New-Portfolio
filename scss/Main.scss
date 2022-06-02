@@ -375,6 +375,12 @@ main{
     background: rgba(0,0,0,.03);
     .container{
         max-width: 800px;
+        .p{
+            margin: 30px 0;
+            strong{
+                color: #0c0677;
+            }
+        }
         .grid{
             display: grid;
             gap: 30px;

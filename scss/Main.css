@@ -539,6 +539,14 @@ main .container .div1 .btns div a {
   max-width: 800px;
 }
 
+.skills .container .p {
+  margin: 30px 0;
+}
+
+.skills .container .p strong {
+  color: #0c0677;
+}
+
 .skills .container .grid {
   display: -ms-grid;
   display: grid;
