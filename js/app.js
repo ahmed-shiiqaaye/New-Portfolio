@@ -25,7 +25,7 @@ document.querySelector('.date').textContent = date;
 let myProjects =[
     //Delta tours
     {
-        id:1,
+        id:'development all',
         title:'Delta tours agency',
         description:'Responsive multiple Page site and toursm online booking for travel single and family',
         img:'./img/delta.png',
@@ -34,7 +34,7 @@ let myProjects =[
     },
     // weatheer app
     {
-        id:2,
+        id:'development all',
         title:'Weather app',
         description:`This weather app allows you to know the weather of any city by writing that city's name in the search bar.`,
         img:'./img/weather.png',
@@ -43,7 +43,7 @@ let myProjects =[
     },
     //fast grow
     {
-        id:3,
+        id:'design all',
         title:'Fast grow w.d agency',
         description:`  Responsive multiple page websie & web development and designer agency.`,
         img:'./img/fast.png',
@@ -52,7 +52,7 @@ let myProjects =[
     },
     //contact app
     {
-        id:4,
+        id:'development all',
         title:'Contact app',
         description:`This contact list creator app allows you to Create your contact list with name, number and random avatar image.`,
         img:`./img/contacts.png`,
@@ -61,7 +61,7 @@ let myProjects =[
     },
     //Navada Hospital
     {
-        id:5,
+        id:'design all',
         title:'Navada Hospital',
         description:` Responsive multiple page website for hospital & an online booking..`,
         img:`./img/Navada.png`,
@@ -70,7 +70,7 @@ let myProjects =[
     },
     //Navada Hospital
     {
-        id:6,
+        id:'design all',
         title:'Hana Online Academy',
         description:`Custom responsive site for small academy & an online teaching & consulting.`,
         img:`./img/Hana.png`,
@@ -82,31 +82,36 @@ let projectsGrid = document.getElementById('project-grid');
 
 
 myProjects.map((project)=>{
-    const { title, id, img, description,github, domain } = project
+    const {img, id, github, domain } = project
     projectsGrid.innerHTML += `
-        <div class="card" data-id='${id}'>
-            <div class="image">
-            <img src="${img}" alt="" />
-            </div>
-        <div class="text">
-            <h3 class="name">${title}</h3>
-            <p>${description}</p>
-        <div class="links">
-            <a
-            href="${domain}"
-            target="_blank"
-            class="btn"
-            >live preview <i class="fa fa-eye"></i
-            ></a>
-            <a
-            href="${github}"
-            target="_blank"
-            class="btn"
-            >see code <i class="fa fa-code"></i
-            ></a>
-        </div>
-        </div>
+    <div class="card ${id}">
+    <div class="image">
+      <img src="${img}" alt="">
     </div>
-    
+    <div class="details">
+      <a href="${domain}">Live Preview</a>
+      <a href="${github}">see code</a>
+    </div>
+  </div>
     `
 })
+
+let allFilterbtns = document.querySelectorAll('.filter-btn');
+let allProjects = document.querySelectorAll('#project-grid .card');
+
+allFilterbtns.forEach((btn)=>{
+    btn.addEventListener('click',(e)=>{
+        let btnDataName = e.target.getAttribute('data-name')
+        showProjects(btnDataName);
+    });
+});
+
+function showProjects(btn){
+    allProjects.forEach((project)=>{
+        if(project.classList.contains(btn)){
+            project.style.display = 'block'
+        }else{
+            project.style.display = 'none'
+        }
+    })
+}

@@ -252,16 +252,21 @@ main .container .div1 .btns div a {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  padding: 10px;
 }
 
 .about .container .grid img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 400px;
-  max-width: 400px;
+  height: 350px;
+  max-width: 350px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 2px solid #3b31f2;
+  border-bottom-right-radius: 70px;
+  -webkit-box-shadow: -6px -6px 0px #3b31f2;
+          box-shadow: -6px -6px 0px #3b31f2;
 }
 
 .about .container .grid .text {
@@ -311,110 +316,6 @@ main .container .div1 .btns div a {
   text-transform: uppercase;
   font-family: pt sans;
   font-weight: bold;
-}
-
-.projects {
-  padding: 60px 0;
-  background: rgba(0, 0, 0, 0.02);
-}
-
-.projects .grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 10px;
-}
-
-.projects .grid .card {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-}
-
-.projects .grid .card:hover {
-  -webkit-box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
-          box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
-}
-
-.projects .grid .card .image {
-  height: 240px;
-  width: 100%;
-  overflow: hidden;
-  background: white;
-  position: relative;
-}
-
-.projects .grid .card .image img {
-  width: 250px;
-  height: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.projects .grid .card .text {
-  padding: 20px 0px;
-}
-
-.projects .grid .card .text .name {
-  text-transform: uppercase;
-  color: #0c0677;
-  margin-bottom: 10px;
-}
-
-.projects .grid .card .text p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #3f3d56;
-}
-
-.projects .grid .card .text .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
-}
-
-.projects .grid .card .text .links a {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  height: 40px;
-  width: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #0c0677;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  padding-left: 10px;
-}
-
-.projects .grid .card .text .links a:hover {
-  background: #7111f0;
-  color: white;
-}
-
-.projects .grid .card .text .links a i {
-  margin-left: 10px;
-}
-
-.projects .grid .card .text .links a:nth-child(1) {
-  background: #7111f0;
-  color: white;
 }
 
 .contact {
@@ -768,12 +669,10 @@ footer .container div a {
             flex-direction: column;
   }
   .about .container .grid img {
-    max-width: 300px;
+    max-width: 100%;
     height: 300px;
-    border-radius: 50%;
     -o-object-fit: cover;
        object-fit: cover;
-    border: 5px solid #0d0b3558;
   }
 }
 
@@ -805,5 +704,124 @@ footer .container div a {
   .contact .container .grid img {
     display: none;
   }
+}
+
+.projects {
+  padding: 50px 0;
+}
+
+.projects .container .title p {
+  margin: 20px 0;
+}
+
+.projects .container .new-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.projects .container .new-grid .card {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: relative;
+}
+
+.projects .container .new-grid .card .image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.projects .container .new-grid .card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.projects .container .new-grid .card .details {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+.projects .container .new-grid .card .details a {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  color: white;
+  padding: 8px 18px;
+  border: 1px solid white;
+  width: 150px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.projects .container .new-grid .card .details a:hover {
+  background: #1a6fb4;
+}
+
+.projects .container .new-grid .card:hover .details {
+  opacity: 1;
+}
+
+.projects .container .filter-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 40px;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects .container .filter-btns .filter-btn {
+  padding: 10px 16px;
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 18px;
+  border: 0;
+}
+
+.projects .container .filter-btns .filter-btn.active {
+  border: 1px solid #3b31f2;
 }
 /*# sourceMappingURL=Main.css.map */
