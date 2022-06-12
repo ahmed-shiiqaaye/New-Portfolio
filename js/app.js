@@ -96,22 +96,22 @@ myProjects.map((project)=>{
     `
 })
 
-let allFilterbtns = document.querySelectorAll('.filter-btn');
-let allProjects = document.querySelectorAll('#project-grid .card');
+// let allFilterbtns = document.querySelectorAll('.filter-btn');
+// let allProjects = document.querySelectorAll('#project-grid .card');
 
-allFilterbtns.forEach((btn)=>{
-    btn.addEventListener('click',(e)=>{
-        let btnDataName = e.target.getAttribute('data-name')
-        showProjects(btnDataName);
-    });
-});
+// allFilterbtns.forEach((btn)=>{
+//     btn.addEventListener('click',(e)=>{
+//         let btnDataName = e.target.getAttribute('data-name')
+//         showProjects(btnDataName);
+//     });
+// });
 
-function showProjects(btn){
-    allProjects.forEach((project)=>{
-        if(project.classList.contains(btn)){
-            project.style.display = 'block'
-        }else{
-            project.style.display = 'none'
-        }
-    })
-}
+// function showProjects(btn){
+//     allProjects.forEach((project)=>{
+//         if(project.classList.contains(btn)){
+//             project.style.display = 'block'
+//         }else{
+//             project.style.display = 'none'
+//         }
+//     })
+// }
