@@ -32,6 +32,23 @@ let myProjects =[
         github:'https://github.com/ahmed-shiiqaaye/Delta-tours',
         domain:'https://delta-tours.netlify.app/',
     },
+    // shaqeste app
+    {
+        id:'development all',
+        title:'Photographer app',
+        description:`This personal photographer website for my client allows you to know the weather of any city by writing that city's name in the search bar.`,
+        img:'./img/shaqeste.png',
+        github:"https://github.com/ahmed-shiiqaaye/Mohamed-photographer",
+        domain:'https://shaqeste.netlify.app/',
+    },
+    {
+        id:'design all',
+        title:'Najma Interior design',
+        description:`Custom responsive site for small academy & an online teaching & consulting.`,
+        img:`./img/najma.png`,
+        github:`https://github.com/ahmed-shiiqaaye/my-interior-design`,
+        domain:"https://najmainterior.netlify.app/",
+    },
     // weatheer app
     {
         id:'development all',
@@ -89,8 +106,8 @@ myProjects.map((project)=>{
       <img src="${img}" alt="">
     </div>
     <div class="details">
-      <a href="${domain}">Live Preview</a>
-      <a href="${github}">see code</a>
+      <a href="${domain}" target="_blank">Live Preview</a>
+      <a href="${github}" target="_blank">see code</a>
     </div>
   </div>
     `
